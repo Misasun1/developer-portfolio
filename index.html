@@ -1,55 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-  
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings"
+    />
+  </head>
+  <body>
     <header>
+      <div class="container">
+        <!--logo-->
+        <a href="#home" id="logo">
+           <!--<img src="" alt="" />--> 
+            MMO
+        </a>
+
         <!--navigation bar-->
         <nav>
-            <!--logo-->
-            <!--Links: skills, projects, contact, CV-->
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf"
+                download
+                >CV</a
+              >
+            </li>
+          </ul>
         </nav>
+        <button id="settings-button" aria-label="Open settings">
+          <img
+            src="assets/icons/3dicons-setting-front-color.png"
+            alt="settings"
+          />
+        </button>
+      </div>
     </header>
-    <main>
 
-        <!--hero section-->
-        <section id="hero">
-            <!--name, profession, introduction-->
-            <a href="">View projects</a>
-            <a href="">Download CV</a>
-
-        </section>
-
-        <!--projects section-->
-        <section id="projects">
-            <!--screenshot, description, technologies used, GitHub link, live demo-->
-        </section>
-
-        <!--skills section-->
-        <section id="skills">
-            <!--Skills grouped by category: Frontend, Backend, Databases, Tools-->
-        </section>
-
-         <!--contact section-->
-        <section id="contact">
-            <!--Email, LinkedIn, Github-->
-        </section>
-
+    <!--Settings Panel-->
+    <aside id="settings-panel">
+        <header>
+            <h2>Settings</h2>
+            <button id="close-button" aria-label="Close settings">
+                <img src="assets/icons/3dicons-plus-dynamic-clay.png" alt="Close settings">
+            </button>
+        </header>
       
+      <section>
+        <h3>Language</h3>
+        <ul>
+          <li><button id="lang-en">English</button></li>
+          <li><button id="lang-de">Deutsch</button></li>
+          <li><button id="lang-it">Italiano</button></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Theme</h3>
+        <button id="light-theme">
+          Light
+          <img
+            src="assets/icons/3dicons-sun-dynamic-color.png"
+            alt="light-theme"
+          />
+        </button>
 
+        <button id="dark-theme">
+          Dark
+          <img
+            src="assets/icons/3dicons-moon-dynamic-gradient.png"
+            alt="dark-theme"
+          />
+        </button>
+      </section>
+    </aside>
+
+    <main>
+      <!--hero section-->
+      <section id="home">
+        <div class="container">
+          <h1>Maria Misa Owusu</h1>
+          <p class="subtitle">Junior Full-Stack Developer • IT Support Specialist</p>
+          
+          <p class="languages">English • German • Italian</p>
+          <p>
+            Turning ideas into clean, accessible and user-focused digital
+            solutions.
+          </p>
+          <a href="#projects" class="btn btn-secondary">View projects</a>
+          <a href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf" download
+            class="btn btn-primary">Download CV</a
+          >
+          <ul>
+            <li>
+              <a href="https://github.com/Misasun1" title="Open GitHub"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+                title="Open LinkedIn"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+                >E-Mail</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--about section-->
+      <section id="about" aria-labelledby="about-title">
+        <div class="container">
+          <!--description-->
+          <h2 id="about-title">About Me</h2>
+          <p>
+            I enjoy building clean, user-friendly web applications and solving
+            technical challenges through thoughtful, structured solutions. With
+            a background in full-stack web development and IT support, I focus
+            on understanding not only how technologies work, but why they are
+            used. I continuously improve my skills through hands-on projects,
+            with particular attention to code quality, accessibility, and user
+            experience.
+          </p>
+        </div>
+      </section>
+
+      <!--projects section-->
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <!--screenshot, technologies used, GitHub link, live demo-->
+          <h2 id="projects-title">Projects</h2>
+        </div>
+      </section>
+
+      <!--skills section-->
+      <section id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title">Skills</h2>
+          <!--Skills grouped by category: Frontend, Backend, Databases, Tools-->
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Bootstrap</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>Responsive Webdesign</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul>
+              <li>PHP</li>
+              <li>Symfony</li>
+              <li>REST APIs</li>
+              <li>JSON</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <ul>
+              <li>SQL</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Eclipse</li>
+              <li>Figma</li>
+              <li>XAMPP</li>
+              <li>composer</li>
+              <li>npm</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Trello</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--contact section-->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <!--Email, LinkedIn, Github-->
+          <h2 id="contact-title">Contact</h2>
+          <div class="social-links" aria-label="Social media">
+            <ul>
+                <li>
+            <a href="https://github.com/Misasun1" title="Open GitHub">GitHub</a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+              title="Open LinkedIn"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+              >E-Mail</a
+            >
+          </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <footer>
-            <!--name, year, copyrights-->
+      <div class="container">
+        <!--name, year, copyrights-->
+        <!--for returning to the home section button-->
+        <ul>
+          <li>&copy; 2026 Maria Misa Owusu. All rights reserved.</li>
+          <li>
+            <a href="https://github.com/Misasun1" title="Open GitHub">GitHub</a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+              title="Open LinkedIn"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+              >E-Mail</a
+            >
+          </li>
+          <li><a href="#home">Back at the top</a></li>
+        </ul>
+      </div>
     </footer>
 
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

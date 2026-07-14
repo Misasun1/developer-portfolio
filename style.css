@@ -1,0 +1,184 @@
+/* todo  CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* todo  CSS VARIABLES */
+:root {
+  /* colors */
+  --primary: #4f46e5;
+  --secondary: #8b5cf6;
+  --accent: #c9a227;
+
+  --background: #fafafa;
+  --surface: #ffffff;
+
+  --text: #1f2937;
+  --text-light: #6b7280;
+
+  /* typography */
+
+  /* font size */
+  --fs-h1: 3rem;
+  --fs-h2: 2.3rem;
+  --fs-body: 1rem;
+  --fs-subtitle: 1.5rem;
+
+  /* font weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+/* todo GLOBAL STYLES  */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* todo BASE ELEMENTS */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* todo TYPOGRAPHY  */
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+}
+
+.subtitle {
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-medium);
+}
+
+p {
+  font-size: var(--fs-body);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-regular);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* todo SPACING SYSTEM  */
+
+/* todo BUTTONS  */
+/* general rules for buttons */
+.btn{
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+    font-weight: var(--fw-medium);
+    cursor: pointer; 
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: 
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .15s ease;
+
+
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+.btn:active{
+    transform: scale(0.98);     
+}
+
+.btn:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* primary buttons */
+.btn-primary{
+    background: var(--primary);
+    color:var(--surface);
+}
+
+.btn-primary:hover{
+    background: var(--secondary);
+}
+
+/* secondary buttons */
+.btn-secondary{
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:hover{
+    background: rgba(79,70,229,.08);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* todo  GLASS CARD */
+
+/* todo  HEADER */
+
+/* todo  SETTINGS PANEL */
+
+/* todo HERO SECTION  */
+
+/* todo ABOUT SECTION  */
+
+/* todo PROJECTS SECTION  */
+
+/* todo  SKILLS SECTION */
+
+/* todo CONTACT SECTION  */
+
+/* todo FOOTER  */
+
+/* todo MEDIA QUERIES  */
