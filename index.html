@@ -16,8 +16,8 @@
       <div class="container">
         <!--logo-->
         <a href="#home" id="logo">
-           <!--<img src="" alt="" />--> 
-            MMO
+          <!--<img src="" alt="" />-->
+          MMO
         </a>
 
         <!--navigation bar-->
@@ -31,8 +31,8 @@
             <li>
               <a
                 href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf"
-                download
-                >CV</a
+                download aria-label="Download CV PDF" class="nav-cv"
+                >Download CV ↓</a
               >
             </li>
           </ul>
@@ -48,13 +48,16 @@
 
     <!--Settings Panel-->
     <aside id="settings-panel">
-        <header>
-            <h2>Settings</h2>
-            <button id="close-button" aria-label="Close settings">
-                <img src="assets/icons/3dicons-plus-dynamic-clay.png" alt="Close settings">
-            </button>
-        </header>
-      
+      <header>
+        <h2>Settings</h2>
+        <button id="close-button" aria-label="Close settings">
+          <img
+            src="assets/icons/3dicons-plus-dynamic-clay.png"
+            alt="Close settings"
+          />
+        </button>
+      </header>
+
       <section>
         <h3>Language</h3>
         <ul>
@@ -85,146 +88,180 @@
 
     <main>
       <!--hero section-->
-      <section id="home">
+      <section id="home" class="hero">
         <div class="container">
-          <h1>Maria Misa Owusu</h1>
-          <p class="subtitle">Junior Full-Stack Developer • IT Support Specialist</p>
-          
-          <p class="languages">English • German • Italian</p>
-          <p>
-            Turning ideas into clean, accessible and user-focused digital
-            solutions.
-          </p>
-          <a href="#projects" class="btn btn-secondary">View projects</a>
-          <a href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf" download
-            class="btn btn-primary">Download CV</a
-          >
-          <ul>
-            <li>
-              <a href="https://github.com/Misasun1" title="Open GitHub"
-                >GitHub</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
-                title="Open LinkedIn"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
-                >E-Mail</a
-              >
-            </li>
-          </ul>
+          <div class="hero-content">
+            <h1>Maria Misa Owusu</h1>
+            <p class="subtitle">
+              Junior Full-Stack Developer • IT Support Specialist
+            </p>
+
+            <p class="languages">English • German • Italian</p>
+            <p class="hero-description">
+              Turning ideas into clean, accessible and user-focused digital
+              solutions.
+            </p>
+            <div class="hero-buttons">
+            <a href="#projects" class="btn btn-secondary">View projects</a>
+            <a
+              href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf"
+              download
+              class="btn btn-primary"
+              >Download CV</a
+            >
+            <!--end div hero-buttons-->
+            </div>
+            <ul class="social-links">
+              <li>
+                <a href="https://github.com/Misasun1" title="Open GitHub"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+                  title="Open LinkedIn"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+                  >E-Mail</a
+                >
+              </li>
+            </ul>
+            <!--end div hero-content-->
+          </div>
+          <!--end div container-->
         </div>
       </section>
 
       <!--about section-->
       <section id="about" aria-labelledby="about-title">
         <div class="container">
-          <!--description-->
-          <h2 id="about-title">About Me</h2>
-          <p>
-            I enjoy building clean, user-friendly web applications and solving
-            technical challenges through thoughtful, structured solutions. With
-            a background in full-stack web development and IT support, I focus
-            on understanding not only how technologies work, but why they are
-            used. I continuously improve my skills through hands-on projects,
-            with particular attention to code quality, accessibility, and user
-            experience.
-          </p>
+          <div class="glass-card">
+            <h2 id="about-title">About Me</h2>
+            <p>
+              I enjoy building clean, user-friendly web applications and solving
+              technical challenges through thoughtful, structured solutions.
+              With a background in full-stack web development and IT support, I
+              focus on understanding not only how technologies work, but why
+              they are used. I continuously improve my skills through hands-on
+              projects, with particular attention to code quality,
+              accessibility, and user experience.
+            </p>
+            <!--end div glass card-->
+          </div>
+          <!--end div container-->
         </div>
       </section>
 
       <!--projects section-->
       <section id="projects" aria-labelledby="projects-title">
         <div class="container">
-          <!--screenshot, technologies used, GitHub link, live demo-->
-          <h2 id="projects-title">Projects</h2>
+          <div class="glass-card">
+            <!--screenshot, technologies used, GitHub link, live demo-->
+            <h2 id="projects-title">Projects</h2>
+
+            <!--end div glas card-->
+          </div>
+          <!--end div container-->
         </div>
       </section>
 
       <!--skills section-->
       <section id="skills" aria-labelledby="skills-title">
         <div class="container">
-          <h2 id="skills-title">Skills</h2>
-          <!--Skills grouped by category: Frontend, Backend, Databases, Tools-->
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Bootstrap</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Angular</li>
-              <li>Responsive Webdesign</li>
-            </ul>
-          </div>
+          <div class="glass-card">
+            <h2 id="skills-title">Skills</h2>
+            <!--Skills grouped by category: Frontend, Backend, Databases, Tools-->
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Angular</li>
+                <li>Responsive Webdesign</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <ul>
-              <li>PHP</li>
-              <li>Symfony</li>
-              <li>REST APIs</li>
-              <li>JSON</li>
-              <li>JavaScript</li>
-              <li>Python</li>
-            </ul>
-          </div>
+            <div class="skill-category">
+              <h3>Backend</h3>
+              <ul>
+                <li>PHP</li>
+                <li>Symfony</li>
+                <li>REST APIs</li>
+                <li>JSON</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3>Databases</h3>
-            <ul>
-              <li>SQL</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
+            <div class="skill-category">
+              <h3>Databases</h3>
+              <ul>
+                <li>SQL</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <ul>
-              <li>Visual Studio Code</li>
-              <li>Eclipse</li>
-              <li>Figma</li>
-              <li>XAMPP</li>
-              <li>composer</li>
-              <li>npm</li>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Trello</li>
-            </ul>
+            <div class="skill-category">
+              <h3>Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Eclipse</li>
+                <li>Figma</li>
+                <li>XAMPP</li>
+                <li>composer</li>
+                <li>npm</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Trello</li>
+              </ul>
+              <!--end div skill-category-->
+            </div>
+
+            <!--end div glass card -->
           </div>
+          <!--end div container-->
         </div>
       </section>
 
       <!--contact section-->
       <section id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <!--Email, LinkedIn, Github-->
-          <h2 id="contact-title">Contact</h2>
-          <div class="social-links" aria-label="Social media">
-            <ul>
+          <div class="glass-card">
+            <!--Email, LinkedIn, Github-->
+            <h2 id="contact-title">Contact</h2>
+            <div class="social-links" aria-label="Social media">
+              <ul>
                 <li>
-            <a href="https://github.com/Misasun1" title="Open GitHub">GitHub</a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
-              title="Open LinkedIn"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
-              >E-Mail</a
-            >
-          </li>
-            </ul>
+                  <a href="https://github.com/Misasun1" title="Open GitHub"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+                    title="Open LinkedIn"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+                    >E-Mail</a
+                  >
+                </li>
+              </ul>
+              <!--end div social-links-->
+            </div>
+
+            <!--end div glass card-->
           </div>
+          <!--end div container-->
         </div>
       </section>
     </main>

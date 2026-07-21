@@ -1,3 +1,6 @@
+/*=========================
+    RESET
+========================= */
 /* todo  CSS RESET */
 *,
 *::before,
@@ -7,6 +10,37 @@
   box-sizing: border-box;
 }
 
+/*=========================
+    FONTS
+========================= */
+
+@font-face {
+  font-family: "Heilga";
+  src: url(assets/fonts/Heilga-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tritone";
+  src: url(assets/fonts/Champagne_Design-Tritone_Bold.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Frestlora";
+  src: url(assets/fonts/Frestlora-Regular.otf) format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gratven";
+  src: url(assets/fonts/GRATVEN-Regular.otf) format("opentype");
+  font-display: swap;
+}
+
+/*=========================
+    VARIABLES
+========================= */
 /* todo  CSS VARIABLES */
 :root {
   /* colors */
@@ -19,8 +53,6 @@
 
   --text: #1f2937;
   --text-light: #6b7280;
-
-  /* typography */
 
   /* font size */
   --fs-h1: 3rem;
@@ -44,7 +76,28 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
+
+  /* glass card */
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.25);
+
+  /* shadows */
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  /* fonts */
+  --font-heading: "Tritone", serif;
+  --font-display: "Gratven";
+  --font-body: "Inter", sans-serif;
+
+  /* decorative */
+  --ornament-color: var(var(--accent));
+  --ornament-opacity: 0.2;
+  --ornament-thickness: 2px;
 }
+
+/*=========================
+    GLOBAL STYLES
+========================= */
 
 /* todo GLOBAL STYLES  */
 html {
@@ -52,7 +105,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   background-color: var(--background);
   color: var(--text);
@@ -62,6 +115,10 @@ body {
   width: min(1100px, 90%);
   margin: 0 auto;
 }
+
+/*=========================
+    BASE ELEMENTS
+========================= */
 
 /* todo BASE ELEMENTS */
 ul {
@@ -78,11 +135,18 @@ img {
   max-width: 100%;
 }
 
+/*=========================
+    TYPOGRAPHY
+========================= */
+
 /* todo TYPOGRAPHY  */
 
 h1 {
   font-size: var(--fs-h1);
   font-weight: var(--fw-bold);
+
+  font-family: var(--font-display);
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -97,6 +161,9 @@ p {
 h2 {
   font-size: var(--fs-h2);
   font-weight: var(--fw-regular);
+
+  font-family: var(--font-heading);
+  text-transform: uppercase;
 }
 
 h1,
@@ -106,71 +173,239 @@ p {
   margin: 0;
 }
 
-/* todo SPACING SYSTEM  */
+#logo {
+  font-family: var(--font-display);
+}
+
+/*=========================
+    COMPONENTS
+========================= */
 
 /* todo BUTTONS  */
 /* general rules for buttons */
-.btn{
-    display: inline-block;
-    padding: var(--space-sm) var(--space-md);
-    text-align: center;
-    font-weight: var(--fw-medium);
-    cursor: pointer; 
-    border-radius: var(--radius-md);
-    border: 1px solid transparent;
-    transition: 
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .15s ease;
-
-
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.15s ease;
 }
 
-.btn:hover{
-    transform: translateY(-2px);
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-.btn:active{
-    transform: scale(0.98);     
+.btn:active {
+  transform: scale(0.98);
 }
 
-.btn:focus-visible{
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 /* primary buttons */
-.btn-primary{
-    background: var(--primary);
-    color:var(--surface);
+.btn-primary {
+  background: var(--primary);
+  color: var(--surface);
 }
 
-.btn-primary:hover{
-    background: var(--secondary);
+.btn-primary:hover {
+  background: var(--secondary);
 }
 
 /* secondary buttons */
-.btn-secondary{
-    background: transparent;
-    color: var(--primary);
-    border-color: var(--primary);
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
-.btn-secondary:hover{
-    background: rgba(79,70,229,.08);
-    color: var(--accent);
-    border-color: var(--accent);
+.btn-secondary:hover {
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* todo  GLASS CARD */
+.glass-card {
+  padding: var(--space-lg);
+  background: var(--glass-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-card p {
+  max-width: 70ch;
+}
+
+/*=========================
+    SPACING SYSTEM
+========================= */
+
+/* todo SPACING SYSTEM */
+section {
+  padding-block: var(--space-xl);
+}
+
+/*=========================
+    LAYOUT
+========================= */
 
 /* todo  HEADER */
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-block: var(--space-sm);
+  background: rgba(250, 250, 250, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+nav a {
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+#logo {
+  /* font-family: "Cormorant Garamond", serif; */
+  /* font-family: var(--font-display); */
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+#logo:hover {
+  color: var(--accent);
+}
+
+/* todo  SETTINGS BUTTON*/
+#settings-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+#settings-button img {
+  width: 28px;
+  height: 28px;
+}
+
+#settings-button:hover {
+  background: rgba(79, 70, 229, 0.08);
+  transform: rotate(90deg);
+  transition-duration: 0.4s;
+}
+
+#settings-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* todo  SETTINGS PANEL */
+
+#settings-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: var(--glass-bg);
+  border-left: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+#settings-panel.open {
+  transform: translateX(0);
+}
 
 /* todo HERO SECTION  */
 
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 700px;
+}
+
+.hero-description {
+  max-width: 60ch;
+  color: var(--text-light);
+}
+
+.languages {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.nav-cv {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.nav-cv:hover {
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--accent);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
 /* todo ABOUT SECTION  */
 
 /* todo PROJECTS SECTION  */
@@ -180,5 +415,9 @@ p {
 /* todo CONTACT SECTION  */
 
 /* todo FOOTER  */
+
+/*=========================
+    MEDIA QUERIES
+========================= */
 
 /* todo MEDIA QUERIES  */
