@@ -1,3 +1,4 @@
+// PROJECT SECTION
 const projectPreviews = document.querySelectorAll(".project-preview");
 const closeButtons = document.querySelectorAll(".close-project");
 

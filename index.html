@@ -41,7 +41,7 @@
         </nav>
         <button id="settings-button" aria-label="Open settings">
           <img
-            src="assets/icons/3dicons-setting-front-color.png"
+            src="assets/icons/setting-panel-icon.png"
             alt="settings"
           />
         </button>
@@ -54,7 +54,7 @@
         <h2>Settings</h2>
         <button id="close-button" aria-label="Close settings">
           <img
-            src="assets/icons/3dicons-plus-dynamic-clay.png"
+            src="assets/icons/close-setting-panel-icon.png"
             alt="Close settings"
           />
         </button>
@@ -73,7 +73,7 @@
         <button id="light-theme">
           Light
           <img
-            src="assets/icons/3dicons-sun-dynamic-color.png"
+            src="assets/icons/light-mode-button.png"
             alt="light-theme"
           />
         </button>
@@ -81,7 +81,7 @@
         <button id="dark-theme">
           Dark
           <img
-            src="assets/icons/3dicons-moon-dynamic-gradient.png"
+            src="assets/icons/dark-mode-button.png"
             alt="dark-theme"
           />
         </button>
@@ -91,6 +91,9 @@
     <main>
       <!--hero section-->
       <section id="home" class="hero">
+        <div class="hero-ornament hero-ornament-left"></div>
+        <div class="hero-ornament hero-ornament-center"></div>
+        <div class="hero-ornament hero-ornament-right"></div>
         <div class="container">
           <div class="hero-content">
             <h1>Maria Misa Owusu</h1>
@@ -115,7 +118,11 @@
             </div>
             <ul class="social-links">
               <li>
-                <a href="https://github.com/Misasun1" title="Open GitHub"
+                <a
+                  href="https://github.com/Misasun1"
+                  title="Open GitHub"
+                  target="_blank"
+                  rel="noreferrer noopener"
                   >GitHub</a
                 >
               </li>
@@ -123,6 +130,8 @@
                 <a
                   href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
                   title="Open LinkedIn"
+                  target="_blank"
+                  rel="noreferrer noopener"
                   >LinkedIn</a
                 >
               </li>
@@ -139,27 +148,82 @@
       </section>
 
       <!--about section-->
-      <section id="about" aria-labelledby="about-title">
-        <div class="container">
-          <div class="glass-card">
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-visual glass-card">
+            <img
+              src="assets/images/about-section/photo-about-section-3.png"
+              alt="Art noveau illustration created for the portfolio visual identity"
+            />
+            <!--end div about-visual glass card-->
+          </div>
+          <div class="about-content glass-card">
             <h2 class="section-title">About Me</h2>
-            <p>
-              I enjoy building clean, user-friendly web applications and solving
-              technical challenges through thoughtful, structured solutions.
-              With a background in full-stack web development and IT support, I
-              focus on understanding not only how technologies work, but why
-              they are used. I continuously improve my skills through hands-on
-              projects, with particular attention to code quality,
-              accessibility, and user experience.
+            <p class="about-intro">
+              I'm a Junior Full-Stack Developer with a background in visual arts
+              and a passion for creating elegant, accessible and user-focused
+              digital experiences. My Journey combines creativity,
+              problem-solving and a growing technical skill set in web
+              development and IT Support.
             </p>
-            <!--end div glass card-->
+            <details class="about-details">
+              <summary>Read More</summary>
+              <div class="about-details-content">
+                <p>
+                  After completing my Full-Stack Web Development training at
+                  Code Factory Vienna, I have been building responsive
+                  interfaces, experimenting with interactive UI animations and
+                  strengthening my understanding of modern frontend and backend
+                  technologies.
+                </p>
+
+                <p>
+                  I enjoy transforming ideas into clean and maintainable
+                  solutions, paying attention not only to functionality but also
+                  to visual harmony, usability and detail. My artistic
+                  background helps me approach development with a strong sense
+                  of composition, color and user experience.
+                </p>
+              </div>
+            </details>
+
+            <details class="about-status">
+              <summary>Current Focus</summary>
+              <div class="about-highlights">
+                <div class="highlight">
+                  <span class="highlight-label">Focus</span>
+                  <span>Frontend • UI/UX • Responsive Design</span>
+                </div>
+
+                <div class="highlight">
+                  <span class="highlight-label">Currently Learning</span>
+                  <span>Power Platform • German C1</span>
+                </div>
+
+                <div class="highlight">
+                  <span class="highlight-label">Goal</span>
+                  <span
+                    >Contribute to meaningful digital products and continue
+                    growing as a web developer.</span
+                  >
+                  <!--end div highlight-->
+                </div>
+                <!--end div about-highlights-->
+              </div>
+            </details>
+
+            <!--end div about-content glass card-->
           </div>
           <!--end div container-->
         </div>
       </section>
 
       <!--projects section-->
-      <section id="projects" aria-labelledby="projects-title">
+      <section
+        id="projects"
+        class="project-section"
+        aria-labelledby="projects-title"
+      >
         <div class="container">
           <h2 class="section-title">Projects</h2>
 
@@ -204,7 +268,13 @@
                     Personal portfolio built from scratch using semantic HTML,
                     modern CSS and vanilla JavaScript.
                   </p>
-
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque tempore modi repudiandae placeat eum repellendus?
+                    </p>
+                  </details>
                   <div class="project-links">
                     <a
                       href="https://github.com/Misasun1/developer-portfolio.git"
@@ -255,9 +325,7 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">
-                    Lorem ipsum dolor sit amet.
-                  </h3>
+                  <h3 class="project-expanded-title">Lorem ipsum dolor.</h3>
                   <p class="project-stack">HTML • CSS •JavaScript</p>
                   <p class="project-description">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -265,6 +333,14 @@
                     Autem blanditiis tenetur architecto totam exercitationem
                     aliquid?
                   </p>
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Magni velit porro molestiae necessitatibus quisquam enim
+                      qui, vitae accusamus possimus culpa.
+                    </p>
+                  </details>
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
@@ -312,9 +388,21 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title"></h3>
+                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
                   <p class="project-stack"></p>
-                  <p class="project-description"></p>
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat iusto in rem!
+                  </p>
+
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Magni velit porro molestiae necessitatibus quisquam enim
+                      qui, vitae accusamus possimus culpa.
+                    </p>
+                  </details>
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
@@ -362,9 +450,21 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title"></h3>
+                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
                   <p class="project-stack"></p>
-                  <p class="project-description"></p>
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis, aliquam?
+                  </p>
+
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Magni velit porro molestiae necessitatibus quisquam enim
+                      qui, vitae accusamus possimus culpa.
+                    </p>
+                  </details>
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
@@ -412,9 +512,21 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title"></h3>
+                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
                   <p class="project-stack"></p>
-                  <p class="project-description"></p>
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Maiores, deserunt.
+                  </p>
+
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Magni velit porro molestiae necessitatibus quisquam enim
+                      qui, vitae accusamus possimus culpa.
+                    </p>
+                  </details>
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
@@ -462,9 +574,21 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title"></h3>
+                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
                   <p class="project-stack"></p>
-                  <p class="project-description"></p>
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil, non!
+                  </p>
+
+                  <details class="project-notes">
+                    <summary>Challanges &amp; solutions</summary>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Magni velit porro molestiae necessitatibus quisquam enim
+                      qui, vitae accusamus possimus culpa.
+                    </p>
+                  </details>
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
@@ -486,7 +610,11 @@
       </section>
 
       <!--skills section-->
-      <section id="skills" aria-labelledby="skills-title">
+      <section
+        id="skills"
+        class="skills-section"
+        aria-labelledby="skills-title"
+      >
         <div class="container">
           <h2 class="section-title">Skills</h2>
 
@@ -531,8 +659,8 @@
                 <li>Eclipse</li>
                 <li>Figma</li>
                 <li>XAMPP</li>
-                <li>composer</li>
-                <li>npm</li>
+                <li>Composer</li>
+                <li>Npm</li>
                 <li>Git</li>
                 <li>GitHub</li>
                 <li>Trello</li>
@@ -548,30 +676,33 @@
 
       <!--contact section-->
       <section id="contact" aria-labelledby="contact-title">
-        <div class="container">
-          <div class="glass-card">
+        <div class="container contact-wrapper">
+          <div class="contact-ornament"></div>
+
+          <div class="glass-card contact-card">
             <!--Email, LinkedIn, Github-->
             <h2 class="section-title">Contact</h2>
+            <p class="contact-text">
+              I'm currently open to opportunities as a Junior Web Developer,
+              Full-Stack Developer or IT Support Specialist. If you'd like to
+              collaborate, discuss a project or simply connect, I'd be happy to
+              hear from you.
+            </p>
             <div class="social-links" aria-label="Social media">
-              <ul>
-                <li>
-                  <a href="https://github.com/Misasun1" title="Open GitHub"
-                    >GitHub</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
-                    title="Open LinkedIn"
-                    >LinkedIn</a
-                  >
-                </li>
-                <li>
-                  <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
-                    >E-Mail</a
-                  >
-                </li>
-              </ul>
+              <a href="https://github.com/Misasun1" title="Open GitHub"
+                >GitHub</a
+              >
+
+              <a
+                href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+                title="Open LinkedIn"
+                >LinkedIn</a
+              >
+
+              <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+                >E-Mail</a
+              >
+
               <!--end div social-links-->
             </div>
 
@@ -589,11 +720,19 @@
         <ul>
           <li>&copy; 2026 Maria Misa Owusu. All rights reserved.</li>
           <li>
-            <a href="https://github.com/Misasun1" title="Open GitHub">GitHub</a>
+            <a
+              href="https://github.com/Misasun1"
+              target="_blank"
+              rel="noreferrer noopener"
+              title="Open GitHub"
+              >GitHub</a
+            >
           </li>
           <li>
             <a
               href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+              target="_blank"
+              rel="noreferrer noopener"
               title="Open LinkedIn"
               >LinkedIn</a
             >
