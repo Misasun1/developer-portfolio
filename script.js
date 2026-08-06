@@ -1,4 +1,65 @@
+//=================================
+// HEADER AND SETTING PANEL
+//=================================
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+// Settings panel
+const settingsButton = document.getElementById("settings-button");
+const settingsPanel = document.getElementById("settings-panel");
+const closeButton = document.getElementById("close-button");
+
+function openSettings() {
+  settingsPanel.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSettings() {
+  settingsPanel.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+if (settingsButton && settingsPanel && closeButton) {
+  settingsButton.addEventListener("click", openSettings);
+  closeButton.addEventListener("click", closeSettings);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSettings();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedInsidePanel = settingsPanel.contains(event.target);
+    const clickedSettingsButton = settingsButton.contains(event.target);
+
+    if (
+      settingsPanel.classList.contains("open") &&
+      !clickedInsidePanel &&
+      !clickedSettingsButton
+    ) {
+      closeSettings();
+    }
+  });
+}
+
+//=================================
 // PROJECT SECTION
+//=================================
 const projectPreviews = document.querySelectorAll(".project-preview");
 const closeButtons = document.querySelectorAll(".close-project");
 
@@ -130,4 +191,55 @@ projectPreviews.forEach((preview) => {
     "afterbegin",
     '<span class= "project-page-extra" aria-hidden="true"></span>',
   );
+});
+
+//===============================================================
+// SKILLS SECTION: ANIMATION IN ENTRANCE + CLICK-TO-FLIP + HINT)
+//===============================================================
+const skillsGrid = document.querySelector(".skills-grid");
+const skillCards = document.querySelectorAll(".skill-card");
+
+if (skillsGrid) {
+  if ("IntersectionObserver" in window) {
+    try {
+      const fanObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              skillsGrid.classList.add("fanned");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+      fanObserver.observe(skillsGrid);
+    } catch (err) {
+      skillsGrid.classList.add("fanned");
+    }
+  } else {
+    skillsGrid.classList.add("fanned");
+  }
+}
+
+const HINT_DELAY = 3000;
+
+skillCards.forEach((card) => {
+  let hintTimer = setTimeout(() => {
+    if (!card.classList.contains("flipped")) {
+      card.classList.add("show-hint");
+    }
+  }, HINT_DELAY);
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+    card.classList.remove("show-hint");
+    clearTimeout(hintTimer);
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      card.click();
+    }
+  });
 });

@@ -39,51 +39,52 @@
             </li>
           </ul>
         </nav>
+
+        <button
+          id="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          ≡
+        </button>
+
         <button id="settings-button" aria-label="Open settings">
-          <img
-            src="assets/icons/setting-panel-icon.png"
-            alt="settings"
-          />
+          <img src="assets/icons/setting-panel-icon.png" alt="settings" />
         </button>
       </div>
     </header>
 
     <!--Settings Panel-->
     <aside id="settings-panel">
-      <header>
-        <h2>Settings</h2>
-        <button id="close-button" aria-label="Close settings">
-          <img
-            src="assets/icons/close-setting-panel-icon.png"
-            alt="Close settings"
-          />
-        </button>
+      <button id="close-button" aria-label="Close settings">
+        <img
+          src="assets/icons/close-setting-panel-icon.png"
+          alt="Close settings"
+        />
+      </button>
+
+      <header class="title-area">
+        <h2 class="settings-title h2-settings-title">Settings</h2>
       </header>
 
       <section>
-        <h3>Language</h3>
+        <h3 class="settings-title h3-settings-title">Language</h3>
         <ul>
           <li><button id="lang-en">English</button></li>
           <li><button id="lang-de">Deutsch</button></li>
           <li><button id="lang-it">Italiano</button></li>
         </ul>
       </section>
-      <section>
-        <h3>Theme</h3>
+      <section class="buttons-theme">
+        <h3 class="settings-title h3-settings-title">Theme</h3>
         <button id="light-theme">
           Light
-          <img
-            src="assets/icons/light-mode-button.png"
-            alt="light-theme"
-          />
+          <img src="assets/icons/light-mode-button.png" alt="light-theme" />
         </button>
 
         <button id="dark-theme">
           Dark
-          <img
-            src="assets/icons/dark-mode-button.png"
-            alt="dark-theme"
-          />
+          <img src="assets/icons/dark-mode-button.png" alt="dark-theme" />
         </button>
       </section>
     </aside>
@@ -96,7 +97,7 @@
         <div class="hero-ornament hero-ornament-right"></div>
         <div class="container">
           <div class="hero-content">
-            <h1>Maria Misa Owusu</h1>
+            <h1 class="hero-name">Maria Misa Owusu</h1>
             <p class="subtitle">
               Junior Full-Stack Developer • IT Support Specialist
             </p>
@@ -617,55 +618,109 @@
       >
         <div class="container">
           <h2 class="section-title">Skills</h2>
-
           <div class="skills-grid">
-            <div class="skill-category glass-card">
-              <h3>Frontend</h3>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Bootstrap</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Angular</li>
-                <li>Responsive Webdesign</li>
-              </ul>
+            <div class="skill-card frontend" data-flip-index="0" tabindex="0" role="button">
+              <div class="skill-category glass-card skill-front">
+                <h3>Frontend</h3>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Bootstrap</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>Angular</li>
+                  <li>Responsive Webdesign</li>
+                </ul>
+              </div>
+
+              <div class="skill-category glass-card skill-back">
+                <img
+                  src="assets/images/skills-section/frontend-card--.png"
+                  alt="Frontend technologies illustration"
+                />
+                <!--end div skill-category (back)-->
+              </div>
+              <span class="skill-hint" aria-hidden="true"
+                >Click to reveal technologies</span
+              >
+              <!--end div skill-card  -->
             </div>
 
-            <div class="skill-category glass-card">
-              <h3>Backend</h3>
-              <ul>
-                <li>PHP</li>
-                <li>Symfony</li>
-                <li>REST APIs</li>
-                <li>JSON</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-              </ul>
+            <div class="skill-card backend" data-flip-index="1" tabindex="0" role="button">
+              <div class="skill-category glass-card skill-front">
+                <h3>Backend</h3>
+                <ul>
+                  <li>PHP</li>
+                  <li>Symfony</li>
+                  <li>REST APIs</li>
+                  <li>JSON</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+
+              <div class="skill-category glass-card skill-back">
+                <img
+                  src="assets/images/skills-section/backend-card.png"
+                  alt="Backend technologies illustration"
+                />
+                <!--end div skill-category (back)-->
+              </div>
+              <span class="skill-hint" aria-hidden="true"
+                >Click to reveal technologies</span
+              >
+              <!--end div skill-card -->
             </div>
 
-            <div class="skill-category glass-card">
-              <h3>Databases</h3>
-              <ul>
-                <li>SQL</li>
-                <li>MySQL</li>
-              </ul>
+            <div class="skill-card databases" data-flip-index="2" tabindex="0" role="button">
+              <div class="skill-category glass-card skill-front">
+                <h3>Databases</h3>
+                <ul>
+                  <li>SQL</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+
+              <div class="skill-category glass-card skill-back">
+                <img
+                  src="assets/images/skills-section/databases-card.png"
+                  alt="Databases technologies illustration"
+                />
+                <!--end div skill-category (back)-->
+              </div>
+              <span class="skill-hint" aria-hidden="true"
+                >Click to reveal technologies</span
+              >
+              <!--end div skill-card -->
             </div>
 
-            <div class="skill-category glass-card">
-              <h3>Tools</h3>
-              <ul>
-                <li>Visual Studio Code</li>
-                <li>Eclipse</li>
-                <li>Figma</li>
-                <li>XAMPP</li>
-                <li>Composer</li>
-                <li>Npm</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Trello</li>
-              </ul>
-              <!--end div skill-category-->
+            <div class="skill-card tools" data-flip-index="3" tabindex="0" role="button">
+              <div class="skill-category glass-card skill-front">
+                <h3>Tools</h3>
+                <ul>
+                  <li>Visual Studio Code</li>
+                  <li>Eclipse</li>
+                  <li>Figma</li>
+                  <li>XAMPP</li>
+                  <li>Composer</li>
+                  <li>Npm</li>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>Trello</li>
+                </ul>
+              </div>
+
+              <div class="skill-category glass-card skill-back">
+                <img
+                  src="assets/images/skills-section/tools-card.png"
+                  alt="Frontend technologies illustration"
+                />
+                <!--end div skill-category (back)-->
+              </div>
+              <!--end skill-card-->
+              <span class="skill-hint" aria-hidden="true"
+                >Click to reveal technologies</span
+              >
             </div>
             <!--end div skills grid-->
           </div>
@@ -713,37 +768,38 @@
       </section>
     </main>
 
-    <footer>
-      <div class="container">
+    <footer class="site-footer">
+      <div class="container footer-content">
         <!--name, year, copyrights-->
         <!--for returning to the home section button-->
-        <ul>
-          <li>&copy; 2026 Maria Misa Owusu. All rights reserved.</li>
-          <li>
-            <a
-              href="https://github.com/Misasun1"
-              target="_blank"
-              rel="noreferrer noopener"
-              title="Open GitHub"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
-              target="_blank"
-              rel="noreferrer noopener"
-              title="Open LinkedIn"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
-              >E-Mail</a
-            >
-          </li>
-          <li><a href="#home">Back at the top</a></li>
-        </ul>
+
+        <p class="footer-copy">
+          &copy; 2026 Maria Misa Owusu. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+          <a
+            href="https://github.com/Misasun1"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open GitHub"
+            >GitHub</a
+          >
+
+          <a
+            href="https://www.linkedin.com/in/maria-misa-owusu-31529933b"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open LinkedIn"
+            >LinkedIn</a
+          >
+          <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
+            >E-Mail</a
+          >
+          <a href="#home" class="back-to-top">↑</a>
+          <!--end div footer-content-->
+        </div>
+        <!--end div footer-content-->
       </div>
     </footer>
 
