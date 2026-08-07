@@ -103,6 +103,40 @@
 }
 
 /*=========================
+    DARK THEME
+========================= */
+body.dark-theme{
+  --background: linear-gradient(270deg, #1b1626,#221833, #2a1d3f,#181320);
+  --surface: #241d30;
+  --text:#f3f4f6;
+  --text-light: #d1d5db;
+  --glass-bg: rgba(32, 24, 45, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme nav a{
+  color: var(--text);
+}
+
+body.dark-theme nav a:hover {
+  color: var(--accent);
+}
+
+body.dark-theme .skill-hint{
+  background: rgba(49, 20, 112, 0.731);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* mobile navigation (theme dark) */
+@media (max-width: 820px) {
+  body.dark-theme nav ul{
+  background: rgba(40, 28, 61, 0.886);
+}
+}
+
+/*=========================
     GLOBAL STYLES
 ========================= */
 
@@ -120,6 +154,9 @@ body {
   color: var(--text);
   background-size: 1000% 1000%;
   animation: movingGradientBackground 30s ease infinite;
+  transition: 
+    background 0.35s ease,
+    color 0.35s ease;
 }
 
 .container {
@@ -578,6 +615,14 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+#settings-panel button.active-setting{
+  background: rgba(201, 162, 39, 0.22);
+  border-color: var(--accent);
+  color: var(--accent);
+  position: relative;
+}
+
+
 #light-theme img,
 #dark-theme img {
   width: 24px;
@@ -591,6 +636,23 @@ nav a:hover {
   flex-direction: column;
   gap: 0.75rem;
 }
+
+#settings-panel button.active-language,
+#settings-panel button.active-theme{
+  background: rgba(201, 162, 39, 0.22);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#settings-panel button.active-language::after,
+#settings-panel button.active-theme::after{
+  content: "✓";
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+
 
 /* todo HERO SECTION  */
 
@@ -1655,6 +1717,7 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.55);
   color: var(--text);
   font-size: 0.8rem;
+  text-align: center;
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-md);
   pointer-events: none;
@@ -1957,7 +2020,7 @@ nav a:hover {
 
   nav {
     position: absolute;
-    top: calc(100% + 00.75rem);
+    top: calc(100% + 0.75rem);
     left: 50%;
     transform: translateX(-50%) translateY(-10px);
     width: min(92vw, 380px);

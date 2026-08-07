@@ -23,17 +23,17 @@
         <!--navigation bar-->
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="navHome">Home</a></li>
+            <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+            <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
+            <li><a href="#about" data-i18n="navAbout">About</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contact</a></li>
             <li>
               <a
                 href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf"
                 download
                 aria-label="Download CV PDF"
-                class="nav-cv"
+                class="nav-cv" data-i18n="downloadCv"
                 >Download CV ↓</a
               >
             </li>
@@ -64,11 +64,11 @@
       </button>
 
       <header class="title-area">
-        <h2 class="settings-title h2-settings-title">Settings</h2>
+        <h2 class="settings-title h2-settings-title" data-i18n="settingsTitle">Settings</h2>
       </header>
 
       <section>
-        <h3 class="settings-title h3-settings-title">Language</h3>
+        <h3 class="settings-title h3-settings-title" data-i18n="languageLabel">Language</h3>
         <ul>
           <li><button id="lang-en">English</button></li>
           <li><button id="lang-de">Deutsch</button></li>
@@ -76,7 +76,7 @@
         </ul>
       </section>
       <section class="buttons-theme">
-        <h3 class="settings-title h3-settings-title">Theme</h3>
+        <h3 class="settings-title h3-settings-title" data-i18n="themeLabel">Theme</h3>
         <button id="light-theme">
           Light
           <img src="assets/icons/light-mode-button.png" alt="light-theme" />
@@ -98,22 +98,22 @@
         <div class="container">
           <div class="hero-content">
             <h1 class="hero-name">Maria Misa Owusu</h1>
-            <p class="subtitle">
+            <p class="subtitle" data-i18n="heroSubtitle">
               Junior Full-Stack Developer • IT Support Specialist
             </p>
 
-            <p class="languages">English • German • Italian</p>
-            <p class="hero-description">
+            <p class="languages" data-i18n="heroSubLang">English • German • Italian</p>
+            <p class="hero-description" data-i18n="heroDescription">
               Turning ideas into clean, accessible and user-focused digital
               solutions.
             </p>
             <div class="hero-buttons">
-              <a href="#projects" class="btn btn-secondary">View projects</a>
+              <a href="#projects" class="btn btn-secondary" data-i18n="viewProjects">View projects</a>
               <a
                 href="assets/documents/Lebenslauf_Maria_Misa__OWUSU_w.pdf"
                 download
                 class="btn btn-primary"
-                >Download CV</a
+                data-i18n="downloadCv">Download CV</a
               >
               <!--end div hero-buttons-->
             </div>
@@ -159,8 +159,8 @@
             <!--end div about-visual glass card-->
           </div>
           <div class="about-content glass-card">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-intro">
+            <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
+            <p class="about-intro" data-i18n="aboutIntro">
               I'm a Junior Full-Stack Developer with a background in visual arts
               and a passion for creating elegant, accessible and user-focused
               digital experiences. My Journey combines creativity,
@@ -168,9 +168,9 @@
               development and IT Support.
             </p>
             <details class="about-details">
-              <summary>Read More</summary>
+              <summary data-i18n="aboutReadMore">Read More</summary>
               <div class="about-details-content">
-                <p>
+                <p data-i18n="aboutParagraph1">
                   After completing my Full-Stack Web Development training at
                   Code Factory Vienna, I have been building responsive
                   interfaces, experimenting with interactive UI animations and
@@ -178,7 +178,7 @@
                   technologies.
                 </p>
 
-                <p>
+                <p data-i18n="aboutParagraph2">
                   I enjoy transforming ideas into clean and maintainable
                   solutions, paying attention not only to functionality but also
                   to visual harmony, usability and detail. My artistic
@@ -189,21 +189,21 @@
             </details>
 
             <details class="about-status">
-              <summary>Current Focus</summary>
+              <summary data-i18n="aboutCurrentFocus">Current Focus</summary>
               <div class="about-highlights">
                 <div class="highlight">
-                  <span class="highlight-label">Focus</span>
-                  <span>Frontend • UI/UX • Responsive Design</span>
+                  <span class="highlight-label" data-i18n="focusLabel">Focus</span>
+                  <span data-i18n="focusContent">Frontend • UI/UX • Responsive Design</span>
                 </div>
 
                 <div class="highlight">
-                  <span class="highlight-label">Currently Learning</span>
-                  <span>Power Platform • German C1</span>
+                  <span class="highlight-label" data-i18n="learningLabel">Currently Learning</span>
+                  <span data-i18n="learningContent">Power Platform • German C1</span>
                 </div>
 
                 <div class="highlight">
-                  <span class="highlight-label">Goal</span>
-                  <span
+                  <span class="highlight-label" data-i18n="goalLabel">Goal</span>
+                  <span data-i18n="goalContent"
                     >Contribute to meaningful digital products and continue
                     growing as a web developer.</span
                   >
@@ -226,12 +226,12 @@
         aria-labelledby="projects-title"
       >
         <div class="container">
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
 
           <div class="projects-grid">
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #06</span>
+                <span class="project-issue" data-i18n="projectIssueLabel6">Issue #06</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -240,8 +240,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title">Developer Portfolio</h3>
-                  <p class="project-stack">HTML • CSS •JavaScript</p>
+                  <h3 class="project-title" data-i18n="projectTitle6">Developer Portfolio</h3>
+                  <p class="project-stack" data-i18n="projectStack6">HTML • CSS • JavaScript</p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -263,15 +263,15 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Developer Portfolio</h3>
-                  <p class="project-stack">HTML • CSS •JavaScript</p>
-                  <p class="project-description">
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle6">Developer Portfolio</h3>
+                  <p class="project-stack" data-i18n="projectStack6">HTML • CSS • JavaScript</p>
+                  <p class="project-description" data-i18n="projectDescription6">
                     Personal portfolio built from scratch using semantic HTML,
                     modern CSS and vanilla JavaScript.
                   </p>
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges &amp; Solutions</summary>
+                    <p data-i18n="projectChallengesParagraph6">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Cumque tempore modi repudiandae placeat eum repellendus?
                     </p>
@@ -282,7 +282,7 @@
                       target="_blank"
                       >GitHub</a
                     >
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -294,7 +294,7 @@
 
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #05</span>
+                <span class="project-issue" data-i18n="projectIssueLabel5">Issue #05</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -303,8 +303,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title">Lorem ipsum dolor sit amet.</h3>
-                  <p class="project-stack">HTML • CSS •JavaScript</p>
+                  <h3 class="project-title" data-i18n="projectTitle5">Lorem ipsum dolor sit amet.</h3>
+                  <p class="project-stack" data-i18n="projectStack5">HTML • CSS •JavaScript</p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -326,17 +326,17 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Lorem ipsum dolor.</h3>
-                  <p class="project-stack">HTML • CSS •JavaScript</p>
-                  <p class="project-description">
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle5">Lorem ipsum dolor.</h3>
+                  <p class="project-stack" data-i18n="projectStack5">HTML • CSS •JavaScript</p>
+                  <p class="project-description" data-i18n="projectDescription5">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Voluptatibus exercitationem reprehenderit blanditiis rem!
                     Autem blanditiis tenetur architecto totam exercitationem
                     aliquid?
                   </p>
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges &amp; Solutions</summary>
+                    <p data-i18n="projectChallengesParagraph5">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Magni velit porro molestiae necessitatibus quisquam enim
                       qui, vitae accusamus possimus culpa.
@@ -345,7 +345,7 @@
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -357,7 +357,7 @@
 
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #04</span>
+                <span class="project-issue" data-i18n="projectIssueLabel4">Issue #04</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -366,8 +366,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title"></h3>
-                  <p class="project-stack"></p>
+                  <h3 class="project-title" data-i18n="projectTitle4"></h3>
+                  <p class="project-stack" data-i18n="projectStack4"></p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -389,16 +389,16 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle4">Lorem, ipsum dolor.</h3>
                   <p class="project-stack"></p>
-                  <p class="project-description">
+                  <p class="project-description" data-i18n="projectDescription4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat iusto in rem!
                   </p>
 
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges &amp; Solutions</summary>
+                    <p data-i18n="projectChallengesParagraph4">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Magni velit porro molestiae necessitatibus quisquam enim
                       qui, vitae accusamus possimus culpa.
@@ -407,7 +407,7 @@
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -419,7 +419,7 @@
 
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #03</span>
+                <span class="project-issue" data-i18n="projectIssueLabel3">Issue #03</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -428,8 +428,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title"></h3>
-                  <p class="project-stack"></p>
+                  <h3 class="project-title" data-i18n="projectTitle3"></h3>
+                  <p class="project-stack" data-i18n="projectStack3"></p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -451,16 +451,16 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
-                  <p class="project-stack"></p>
-                  <p class="project-description">
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle3">Lorem, ipsum dolor.</h3>
+                  <p class="project-stack" data-i18n="projectStack3"></p>
+                  <p class="project-description" data-i18n="projectDescription3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Veritatis, aliquam?
                   </p>
 
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges &amp; Solutions</summary>
+                    <p data-i18n="projectChallengesParagraph3">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Magni velit porro molestiae necessitatibus quisquam enim
                       qui, vitae accusamus possimus culpa.
@@ -469,7 +469,7 @@
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -481,7 +481,7 @@
 
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #02</span>
+                <span class="project-issue" data-i18n="projectIssueLabel2">Issue #02</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -490,8 +490,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title"></h3>
-                  <p class="project-stack"></p>
+                  <h3 class="project-title" data-i18n="projectTitle2"></h3>
+                  <p class="project-stack" data-i18n="projectStack2"></p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -513,16 +513,16 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
-                  <p class="project-stack"></p>
-                  <p class="project-description">
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle2">Lorem, ipsum dolor.</h3>
+                  <p class="project-stack" data-i18n="projectStack2"></p>
+                  <p class="project-description" data-i18n="projectDescription2">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Maiores, deserunt.
                   </p>
 
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges & soluSions</summary>
+                    <p data-i18n="projectChallengesParagraph2">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Magni velit porro molestiae necessitatibus quisquam enim
                       qui, vitae accusamus possimus culpa.
@@ -531,7 +531,7 @@
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -543,7 +543,7 @@
 
             <article class="project-card">
               <div class="project-preview" role="button" tabindex="0">
-                <span class="project-issue">Issue #01</span>
+                <span class="project-issue" data-i18n="projectIssueLabel1">Issue #01</span>
                 <div class="project-cover">
                   <img
                     src="assets/images/ui/placeholder-cover.png"
@@ -552,8 +552,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h3 class="project-title"></h3>
-                  <p class="project-stack"></p>
+                  <h3 class="project-title" data-i18n="projectTitle1"></h3>
+                  <p class="project-stack" data-i18n="projectStack1"></p>
                   <!--end div project-content-->
                 </div>
                 <div class="project-divider"></div>
@@ -575,16 +575,16 @@
                   <button class="close-project" aria-label="Close project">
                     ✕
                   </button>
-                  <h3 class="project-expanded-title">Lorem, ipsum dolor.</h3>
-                  <p class="project-stack"></p>
-                  <p class="project-description">
+                  <h3 class="project-expanded-title" data-i18n="projectExpandedTitle1">Lorem, ipsum dolor.</h3>
+                  <p class="project-stack" data-i18n="projectStack1"></p>
+                  <p class="project-description" data-i18n="projectDescription1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Nihil, non!
                   </p>
 
                   <details class="project-notes">
-                    <summary>Challanges &amp; solutions</summary>
-                    <p>
+                    <summary data-i18n="projectChallenges">Challenges &amp; Solutions</summary>
+                    <p data-i18n="projectChallengesParagraph1">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Magni velit porro molestiae necessitatibus quisquam enim
                       qui, vitae accusamus possimus culpa.
@@ -593,7 +593,7 @@
 
                   <div class="project-links">
                     <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank" data-i18n="liveDemo">Live Demo</a>
                     <a href="#" target="_blank">Figma</a>
                     <!--end div project-links -->
                   </div>
@@ -617,7 +617,7 @@
         aria-labelledby="skills-title"
       >
         <div class="container">
-          <h2 class="section-title">Skills</h2>
+          <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
           <div class="skills-grid">
             <div class="skill-card frontend" data-flip-index="0" tabindex="0" role="button">
               <div class="skill-category glass-card skill-front">
@@ -629,7 +629,7 @@
                   <li>JavaScript</li>
                   <li>TypeScript</li>
                   <li>Angular</li>
-                  <li>Responsive Webdesign</li>
+                  <li data-i18n="frontendSkill">Responsive Webdesign</li>
                 </ul>
               </div>
 
@@ -641,7 +641,7 @@
                 <!--end div skill-category (back)-->
               </div>
               <span class="skill-hint" aria-hidden="true"
-                >Click to reveal technologies</span
+                 data-i18n="skillHint">Click to reveal technologies</span
               >
               <!--end div skill-card  -->
             </div>
@@ -652,7 +652,7 @@
                 <ul>
                   <li>PHP</li>
                   <li>Symfony</li>
-                  <li>REST APIs</li>
+                  <li data-i18n="backendSkill">REST APIs</li>
                   <li>JSON</li>
                   <li>JavaScript</li>
                   <li>Python</li>
@@ -666,7 +666,7 @@
                 />
                 <!--end div skill-category (back)-->
               </div>
-              <span class="skill-hint" aria-hidden="true"
+              <span class="skill-hint" aria-hidden="true" data-i18n="skillHint"
                 >Click to reveal technologies</span
               >
               <!--end div skill-card -->
@@ -674,7 +674,7 @@
 
             <div class="skill-card databases" data-flip-index="2" tabindex="0" role="button">
               <div class="skill-category glass-card skill-front">
-                <h3>Databases</h3>
+                <h3 data-i18n="databasesTitle">Databases</h3>
                 <ul>
                   <li>SQL</li>
                   <li>MySQL</li>
@@ -689,7 +689,7 @@
                 <!--end div skill-category (back)-->
               </div>
               <span class="skill-hint" aria-hidden="true"
-                >Click to reveal technologies</span
+                 data-i18n="skillHint">Click to reveal technologies</span
               >
               <!--end div skill-card -->
             </div>
@@ -719,7 +719,7 @@
               </div>
               <!--end skill-card-->
               <span class="skill-hint" aria-hidden="true"
-                >Click to reveal technologies</span
+                 data-i18n="skillHint">Click to reveal technologies</span
               >
             </div>
             <!--end div skills grid-->
@@ -736,8 +736,8 @@
 
           <div class="glass-card contact-card">
             <!--Email, LinkedIn, Github-->
-            <h2 class="section-title">Contact</h2>
-            <p class="contact-text">
+            <h2 class="section-title" data-i18n="contactTitle">Contact</h2>
+            <p class="contact-text" data-i18n="contactText">
               I'm currently open to opportunities as a Junior Web Developer,
               Full-Stack Developer or IT Support Specialist. If you'd like to
               collaborate, discuss a project or simply connect, I'd be happy to
@@ -773,7 +773,7 @@
         <!--name, year, copyrights-->
         <!--for returning to the home section button-->
 
-        <p class="footer-copy">
+        <p class="footer-copy" data-i18n="footerRights">
           &copy; 2026 Maria Misa Owusu. All rights reserved.
         </p>
 
@@ -796,7 +796,7 @@
           <a href="mailto:mariamisaowusu@gmail.com" title="Send E-Mail"
             >E-Mail</a
           >
-          <a href="#home" class="back-to-top">↑</a>
+          <a href="#home" class="back-to-top" title="Back to top" data-i18n="backToTop">↑</a>
           <!--end div footer-content-->
         </div>
         <!--end div footer-content-->
